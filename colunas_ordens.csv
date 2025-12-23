@@ -1,0 +1,31 @@
+Check,PowerBI PCM,SAP,CSV Databricks,Data Service,Descrição do campo,Sample Value
+ok,Ordem,AUFK.AUFNR,ordem,ordem,"Número identificador da ordem de serviço",610000035937
+ok,Texto breve,AUFK.KTEXT,texto_breve,descricao,"Breve descrição da ordem de serviço",1MES INSP GERADOR AUX EMERGÊNCIA 01 CF
+ok,Tipo de ordem,AUFK.AUART,tipo_ordem,tipo_ordem,"Tipo da ordem de serviço (GAA, GRA, GIA)",GRA
+ok,Empresa,AUFK.BUKRS,empresa,,"Empresa relacionada à ordem de serviço",GHSM
+ok,CenTrabalho princ.,AUFK.VAPLZ,codigo_postal_venda,centro_trabalho,"Centro de trabalho principal da ordem de serviço",SMA-MANT
+,Centro,AUFK.WAWRK,,,"campo extraido na iw37",
+,Status usuário,,,,,BAIX EXEC BLOQ
+,Local de instalação,ILOA.TPLNR,,,,GHSM-HSMA-SSCA-GAEM
+,Plano de manutenção,AFIH.WARPL,,,,4857
+,Data-base do início,AFKO.GSTRP,,,,4/1/2024
+,Data-base do fim,AFKO.GLTRP,,,,02/04/24
+,Dta.início real,AFKO.GSTRI,data_criacao,data_ordem,"Data de criação da ordem de serviço",4/1/2024
+,Data fim real da ordem,AFKO.GETRI,,,,30/04/24
+,Tp.atvd.manut.,AFIH.ILART,,,,PRV
+,Nota,AFIH.QMNUM,,,,null
+,Texto prioridade,t356_t.PRIOKX,,,"join com a afih(PRIOK e ARTPR) e SPRAS igual a 'P'",Prioritário 1M
+,Equipamento,AFIH.EQUNR,,,,SMDE000001
+,Elem.ref.PM/PS,AFIH.ADPSP,,,,null
+,Grupo planej.,AUFK.STORT AFIH.INGPR,,,,SMA
+,Data de referência,AFIH.ADDAT,,,,
+,Data de entrada,AUFK.ERDAT,,,,
+,Item manutenção,AFIH.WAPOS,,,,
+,Txt.breve operação,AFVC.LTXA1,,,"Extraído pela IW37",
+,Status,,,,"Cópia da coluna Status usuário",BAIX EXEC BLOQ
+,Descrição da ordem,,,,"Todos os registros estao vazios",null
+,Descrição,,,,"'Tp.atvd.manut.' = 'COR' e 'Tipo de ordem' = 'GIA' são Manutençoes Corretivas, o restante são Preventivas",Preventiva
+,Status Definição,,,,"É a definição do status de usuario da ordem com base na tabela PCM_Ordens_Status",Encerrado - Executado
+,Plano/Manual,,,,"Definido com base na coluna Plano de manutenção, se tiver vazia, será definido como Manual",Ordem do Plano
+,Critério-Operação preenchida,,,,"Extraçao da IW37 com o campo[Txt.breve operação] <> ''",null
+,Descrição CentTrab,,,,"Descrição contida na tabela PCM_Notas_CentroTrab, relacionando com a coluna 'CenTrabalho princ.'",UHE São Manoel-Mantenedores
